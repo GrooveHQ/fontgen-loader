@@ -167,7 +167,7 @@ module.exports = function(content) {
           context: self.options.context || this.context,
           content: res[format],
         })
-        urls[format] = path.join(pub, url).replace(/\\/g, '/')
+        urls[format] = [pub, url].join('')
         self.emitFile(url, res[format])
       } else {
         urls[format] =
